@@ -1,0 +1,6 @@
+resources:
+  - service.yaml
+  - secret.yaml
+  - pv.yaml
+  - pvc.yaml
+  - deploy.yaml
