@@ -60,7 +60,7 @@ id wordpress
 
 # Create persistent storage directories
 mkdir -p /home/wordpress/data /home/wordpress/mysql
-chown -R wordpress:wordpress /home/wordpress
+chown -R wordpress:wordpress /home/wordpress /home/wordpress/mysql
 ```
 
 ### 4. Configure Your Deployment
@@ -71,8 +71,8 @@ Edit `base/deployment.yaml` to use your WordPress user's UID/GID:
 
 ```yaml
 securityContext:
-  fsGroup: 1015  # Replace with your WordPress user's GID
-  runAsUser: 1015  # Replace with your WordPress user's UID
+  fsGroup: 0000  # Replace with your WordPress user's GID
+  runAsUser: 0000  # Replace with your WordPress user's UID
 ```
 
 #### 4.2 Configure Your Domain
@@ -130,7 +130,7 @@ After successful deployment, complete your WordPress configuration:
 
 2. Choose your preferred language
 
-3. Complete the "5-minute setup":
+3. Complete the setup:
    - Enter your site title
    - Create an admin username and password
    - Provide your email address
@@ -147,7 +147,6 @@ After installation, consider implementing these best practices:
 - **SEO**: Configure Yoast SEO or Rank Math for better search visibility
 - **Performance**: Install Smush or ShortPixel for image optimization
 - **Backup**: Configure UpdraftPlus or BackupBuddy for regular backups
-- **Forms**: Add Contact Form 7 or WPForms for contact pages
 - **Analytics**: Connect to Google Analytics via a plugin
 - **CDN**: Configure Cloudflare or another CDN for better performance
 
@@ -227,7 +226,7 @@ MIT
 Contributions are welcome! Please feel free to submit a Pull Request.
 
 1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
+2. Create your feature branch (`git checkout -b feature/your-feature`)
+3. Commit your changes (`git commit -m 'Add your feature'`)
+4. Push to the branch (`git push origin feature/your-feature`)
 5. Open a Pull Request
