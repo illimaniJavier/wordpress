@@ -42,8 +42,8 @@ kubectl create namespace wordpress
 ### 2. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/wordpress-kubernetes.git
-cd wordpress-kubernetes
+git clone https://github.com/yourusername/wordpress.git
+cd wordpress
 ```
 
 ### 3. User and Directory Setup
