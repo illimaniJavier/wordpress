@@ -42,7 +42,7 @@ kubectl create namespace wordpress
 ### 2. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/wordpress.git
+git clone https://github.com/illimaniJavier/wordpress.git
 cd wordpress
 ```
 
